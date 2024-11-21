@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+.container {
+  background-color: #191d2b;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.loading-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:#135701;;
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  color: #191654;
+}
+
+#svg {
+  height: 200px;
+  width: 200px;
+  stroke: #ffffff;
+  fill-opacity: 0;
+  stroke-width: 5px;
+  stroke-dasharray: 500;
+  animation: draw 18s ease;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.name-container {
+  height: 30px;
+  overflow: hidden;
+}
+
+.logo-name {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-weight: bolder;
+}
+p{
+    color:  #3a3f48;
+    transition: all 0.4s ease-in-out;
+    font-weight: bolder;
+    font-size: 5rem;
+}
+@media screen and (max-width: 720px) {
+   .logo-name {
+     font-size: 14px;
+   }
+  #svg {
+    height: 120px;
+    width: 120px;
+  }
+  p{
+    font-size: 2rem;
+  }
+}
+
+/* modal error style
+  start
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	overflow: hidden;
+  background: #135701;;
+  color: #135701;;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.modal {
+  position: absolute;
+	width: 280px;
+	height: 210px;
+  top: 95px;
+  left: 60px;
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: 4px 8px 12px 0 rgba(0,0,0,0.4);
+	text-align: center;
+	overflow: hidden;
+	animation: show-modal .7s ease-in-out;
+	
+	&.hide {
+		animation: hide-modal .6s ease-in-out both;
+	}
+	
+	.erroricon {
+		margin-top: 24px;
+	}
+	
+	.title {
+		display: block;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 400;
+		margin: 14px 0 5px 0;
+	}
+	
+	p {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 19px;
+		margin: 0;
+		padding: 0 30px;
+	}
+	
+	
+	
+}
+
+@keyframes show-modal {
+	0% {
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: scale(.95);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes hide-modal {
+	0% {
+		transform: scale(1);
+	}
+	20% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
