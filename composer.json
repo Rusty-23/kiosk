@@ -1,0 +1,13 @@
+{
+    "name": "russel/kiosk",
+    "authors": [
+        {
+            "name": "Russel-23",
+            "email": "ptc.lloydrusselllames@gmail.com"
+        }
+    ],
+    "require": {
+        "google/apiclient": "^2.0",
+        "aws/aws-sdk-php": "^3.324"
+    }
+}
